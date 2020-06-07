@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  julia:
+    image: shafiquejamal/julia:1.4.1-buster
+    volumes:
+      - ./data:/data
+      - jupyter-volume-local:/usr/local/etc/jupyter
+      - jupyter-volume-root:/root/.jupyter  
+    ports:
+      - '8088:8080'
+
+volumes:
+  jupyter-volume-local:
+  jupyter-volume-root:
